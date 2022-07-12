@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 765708845}
   - component: {fileID: 765708844}
   m_Layer: 5
-  m_Name: Menu_Canvas
+  m_Name: MainMenu_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 882373079}
   - component: {fileID: 882373078}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: Score_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,7 +663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.11100006}
+  m_AnchoredPosition: {x: 0, y: -0.11099243}
   m_SizeDelta: {x: 0, y: 0.22000122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &882373078
@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 1390364006}
   - component: {fileID: 1390364005}
   m_Layer: 5
-  m_Name: ScoreCanvas
+  m_Name: HighScore_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1195,6 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805920359}
   - component: {fileID: 1805920358}
+  - component: {fileID: 1805920360}
   m_Layer: 0
   m_Name: SceneMain
   m_TagString: Untagged
@@ -1211,9 +1212,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805920357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096561eaf5a51b148aa11fb5715adba1, type: 3}
+  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 1805920360}
+  _installerPrefabs: []
+  _autoRun: 1
+  OnPreInstall:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostInstall:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPreResolve:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostResolve:
+    m_PersistentCalls:
+      m_Calls: []
+  _parentNewObjectsUnderSceneContext: 0
+  _contractNames: []
+  _parentContractNames: []
 --- !u!4 &1805920359
 Transform:
   m_ObjectHideFlags: 0
@@ -1228,3 +1249,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805920360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805920357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad404e3501a3f5048bc403c7c7f792eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
