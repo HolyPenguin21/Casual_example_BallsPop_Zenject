@@ -2,7 +2,6 @@ using UnityEngine;
 
 public abstract class UI_Element
 {
-    protected abstract Canvas Set_CanvasObject();
     public abstract void Hide();
     public abstract void Show();
 
