@@ -8,30 +8,24 @@ public class UI_HighScore : UI_Element
 
     public UI_HighScore()
     {
-        highScore_canvas = Set_CanvasObject();
+        highScore_canvas = Get_SceneObject(highScore_canvas, "HighScore_Canvas");
         score_text = Get_SceneObject(score_text, "Score_Text");
 
-        Show_HighScore();
+        Update_HighScoreText();
     }
 
-    public void Show_HighScore()
+    public void Update_HighScoreText()
     {
         score_text.text = "Current high score :\n" + PlayerPrefs.GetInt("highScore");
     }
 
     public override void Hide()
     {
-        throw new System.NotImplementedException();
+        highScore_canvas.gameObject.SetActive(false);
     }
 
     public override void Show()
     {
-        throw new System.NotImplementedException();
-    }
-
-    protected override Canvas Set_CanvasObject()
-    {
-        Canvas canvas = Get_SceneObject(highScore_canvas, "HighScore_Canvas");
-        return canvas;
+        highScore_canvas.gameObject.SetActive(true);
     }
 }

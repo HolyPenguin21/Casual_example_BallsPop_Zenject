@@ -8,7 +8,7 @@ public class UI_Main_Menu : UI_Element
 
     public UI_Main_Menu(ISceneHandler sceneHandler)
     {
-        mainMenu_canvas = Set_CanvasObject();
+        mainMenu_canvas = Get_SceneObject(mainMenu_canvas, "MainMenu");
         Setup_StartButton(sceneHandler);
         Setup_QuitButton(sceneHandler);
     }
@@ -23,12 +23,6 @@ public class UI_Main_Menu : UI_Element
     {
         quitGame_buton = Get_SceneObject(quitGame_buton, "Quit");
         quitGame_buton.onClick.AddListener(() => sceneHandler.QuitGame());
-    }
-
-    protected override Canvas Set_CanvasObject()
-    {
-        Canvas canvas = Get_SceneObject(mainMenu_canvas, "MainMenu");
-        return canvas;
     }
 
     public override void Hide()
