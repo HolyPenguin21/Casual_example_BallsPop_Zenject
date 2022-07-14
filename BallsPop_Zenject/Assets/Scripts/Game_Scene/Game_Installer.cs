@@ -11,10 +11,12 @@ public class Game_Installer : MonoInstaller
         Container.Bind<IBallEventsHandler>().To<BallEventsHandler>().AsSingle();
         Container.Bind<IPlayer>().To<Player>().AsSingle();
         Container.Bind<ISceneSettings>().To<SceneSettings>().AsSingle();
+        Container.Bind<IScoreHandler>().To<ScoreHandler>().AsSingle().NonLazy();
 
         Container.Bind<UI_Start>().AsSingle().NonLazy();
         Container.Bind<UI_PauseMenu>().AsSingle().NonLazy();
         Container.Bind<UI_Burger>().AsSingle().NonLazy();
         Container.Bind<UI_IngameScore>().AsSingle().NonLazy();
+        Container.Bind<UI_Healthbar>().AsSingle().NonLazy();
     }
 }
