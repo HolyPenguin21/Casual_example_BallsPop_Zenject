@@ -56,7 +56,7 @@ public class Ball : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Time.timeScale == 0) return;
+        if (Time.timeScale == 0.0f) return;
 
         go.SetActive(false);
         ballEventsHandler.Invoke_BallDestroyed(scorePointsReward);

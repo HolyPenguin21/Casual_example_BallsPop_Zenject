@@ -24,19 +24,16 @@ public class BallEventsHandler : IBallEventsHandler, IDisposable
     public void Invoke_BallDestroyed(int value)
     {
         onBallDestroyed?.Invoke(value);
-        Debug.Log("Event > onBallDestroyed");
     }
 
     public void Invoke_BallDestroyedEffect(Vector3 pos)
     {
         onBallDestroyedEffect?.Invoke(pos);
-        Debug.Log("Event > onBallDestroyed");
     }
 
     public void Invoke_BallMissed(int value)
     {
         onBallMissed?.Invoke(value);
-        Debug.Log("Event > onBallMissed");
     }
 
     public void Dispose()

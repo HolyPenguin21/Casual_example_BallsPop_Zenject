@@ -10,6 +10,7 @@ public class Game_Installer : MonoInstaller
         Container.Bind<IGameStateHandler>().To<GameStateHandler>().AsSingle();
         Container.Bind<IBallEventsHandler>().To<BallEventsHandler>().AsSingle();
         Container.Bind<IPlayer>().To<Player>().AsSingle();
+        Container.Bind<ISceneSettings>().To<SceneSettings>().AsSingle();
 
         Container.Bind<UI_Start>().AsSingle().NonLazy();
         Container.Bind<UI_PauseMenu>().AsSingle().NonLazy();

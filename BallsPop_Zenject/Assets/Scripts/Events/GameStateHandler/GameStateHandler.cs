@@ -25,19 +25,17 @@ public class GameStateHandler : IGameStateHandler, IDisposable
     public void Invoke_GameEnd()
     {
         onGameEnd?.Invoke();
-        Debug.Log("Event > onGameEnd");
     }
 
     public void Invoke_GameRestart()
     {
         onGameRestart?.Invoke();
-        Debug.Log("Event > onGameRestart");
+        Time.timeScale = 1.0f; // Review
     }
 
     public void Invoke_GameStart()
     {
         onGameStart?.Invoke();
-        Debug.Log("Event > onGameStart");
     }
 
     public void Dispose()

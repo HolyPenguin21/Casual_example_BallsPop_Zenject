@@ -14,18 +14,19 @@ public class PauseHandler : IPauseHandler, IDisposable
     public void Invoke_Pause()
     {
         onGamePause?.Invoke();
-        Debug.Log("Event > Pause");
+        Time.timeScale = 0.0f;
     }
 
     public void Add_ResumeListener(IPauseHandler.OnGameResume method)
     {
         onGameResume += method;
+        Time.timeScale = 1.0f;
     }
 
     public void Invoke_Resume()
     {
         onGameResume?.Invoke();
-        Debug.Log("Event > onGameResume");
+        Time.timeScale = 1.0f;
     }
 
     public void Dispose()
